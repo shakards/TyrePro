@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TyrePro - Tire Company</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to bottom, #222, #444);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      animation: fadeIn 3s ease-in;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      margin: 0;
+      animation: slideInDown 1.5s ease-out;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      animation: slideInUp 1.5s ease-out;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: orange;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* About Section */
+    .about {
+      background: #f4f4f4;
+      padding: 40px 20px;
+    }
+
+    .about p {
+      text-align: center;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    /* Products Section */
+    .products {
+      padding: 40px 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: zoomIn 1s ease-out;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Services Section */
+    .services {
+      background: #f4f4f4;
+      padding: 40px 20px;
+    }
+
+    .service-list {
+      display: flex;
+      justify-content: space-around;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .service-item {
+      background: orange;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 150px;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: #222;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact form input,
+    .contact form textarea {
+      width: 100%;
+      max-width: 400px;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact form button {
+      background: orange;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #111;
+      color: white;
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-50%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInUp {
+      from {
+        transform: translateY(50%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1 class="hero-title">Welcome to TyrePro</h1>
+    <p class="hero-subtitle">Your trusted partner for premium tires.</p>
+    <a href="#about" class="hero-btn">Learn More</a>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At TyrePro, we provide high-quality tires designed for durability, performance, and safety.</p>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Tire Model A">
+        <h3>Tire Model A</h3>
+        <p>Durable and efficient for all terrains.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Tire Model B">
+        <h3>Tire Model B</h3>
+        <p>Designed for smooth and quiet rides.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service-item">Tire Installation</div>
+      <div class="service-item">Tire Repair</div>
+      <div class="service-item">Wheel Alignment</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 TyrePro. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth Scroll Animation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
+</body>
+</html>
